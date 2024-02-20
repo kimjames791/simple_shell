@@ -6,6 +6,8 @@
 #include <string.h>
 #include <unistd.h>
 
+void rkm_printfunc(const char *inputmsg);
+
 
 
 
