@@ -14,8 +14,8 @@ int main(void)
 	while (1)
 {
 	void shows_prompt(void);
-	reads_order((order) sizeof(order));
-	execute_order(order);
+	char *read_order(void);
+	int execute_order(const char *order);
 }
 
 return (0);
