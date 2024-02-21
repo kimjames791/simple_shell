@@ -8,7 +8,7 @@
 
 void rkmprint_func(const char *inputmsg);
 void shows_prompt(void);
-char reads_order(void);
-int execute_order(const char *order);
+reads_order(order,sizeof(order));
+execute_order(const char *order);
 
 #endif /* SHELL_H */

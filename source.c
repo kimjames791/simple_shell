@@ -14,21 +14,11 @@ int main(void)
 	while (1)
 {
 	void shows_prompt(void);
-	char reads_order((order) sizeof(order));
-	int execute_order(order);
+	reads_order((order) sizeof(order));
+	execute_order(order);
 }
 
 return (0);
 
 }
-
-/**
- * main - a function that displays prompt
- *
- * Return:0 always
- */
-
-void shows_prompt(void)
-{
-	rkm_printfunc
 
