@@ -4,7 +4,7 @@
  * execute_order - Executes a shell command
  * @order: The command to be executed
  *
- * Return: None
+ * Return: None ot -1 if fail
  */
 int execute_order(const char *order)
 {
@@ -25,5 +25,6 @@ int execute_order(const char *order)
 	{
 		wait(NULL);
 	}
+	return 0;
 }
 
