@@ -13,12 +13,21 @@ int main(void)
 
 	while (1)
 {
-	void shows_prompt(void);
-	char *read_order(void);
-	int execute_order(const char *order);
+	shows_prompt();
+	read_order(order);
+	execute_order(order);
 }
 
 return (0);
 
 }
 
+/*
+ * fgets - reads order function
+ *
+ */
+
+void read_order(char *order)
+{
+	fgets(order, 125, stdin);
+}
