@@ -14,20 +14,9 @@ int main(void)
 	while (1)
 {
 	shows_prompt();
-	read_order(order);
+	read_order();
 	execute_order(order);
 }
 
 return (0);
-
-}
-
-/*
- * fgets - reads order function
- *
- */
-
-void read_order(char *order)
-{
-	fgets(order, 125, stdin);
 }
