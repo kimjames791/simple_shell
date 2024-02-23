@@ -14,7 +14,7 @@ int main(void)
 	while (1)
 {
 	shows_prompt();
-	read_order();
+	read_order(order);
 	execute_order(order);
 }
 

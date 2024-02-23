@@ -12,5 +12,6 @@ void rkmprint_func(const char *inputmsg);
 void shows_prompt(void);
 void read_order(char *order);
 int execute_order(const char *order);
+void handle_args(char *command, char **args);
 
 #endif /* SHELL_H */
