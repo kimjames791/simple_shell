@@ -1,22 +1,25 @@
 #include "shell.h"
 
-**
-* @read_order - this is to command the shell to input 
-* the commands
-*
-* Return - (0) on success otherwise (-1) on failure .
-* /
+/**
+* read_order - reads all the user input commands
+* of the shell 
+* @order: inputs all user commands
+* Return: 0 on success otherwise (-1) on failure .
+*/
 
-char *read_order(void)
+void read_order(char *order)
 {
-      if (fgets(command, size, stdin) == NULL) {
-        if (feof(stdin)) {
+      if (fgets(order, 125, stdin) == NULL) 
+      {
+        if (feof(stdin))
+	{
             rkmprint_func("\n");
             exit(EXIT_SUCCESS);
-        } else {
+        } else
+	{
             perror("fgets");
             exit(EXIT_FAILURE);
         }
-    }
-    command[strcspn(command, "\n")] = '\0'; // Remove newline
+      }
+            order[strcspn(order, "\n")] = '\0';
 }
