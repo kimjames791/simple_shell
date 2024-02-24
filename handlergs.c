@@ -1,24 +1,30 @@
 #include "shell.h"
 #define MAX_ARGS 20
 /**
- * main - a function that handles args
+ * handle_args - a function that handles arguments
  *@args:arguments passed
  *@command: order or instruction
  * handle_args - this takes in the arguments passed handles them
+ * my_program - a function that parses and executes user command
  */
 void handle_args(char *command, char **args)
 {
-	rkmprint_func("Executing command: %s\n", command);
-	rkmprint_func("Arguments:\n");
 	int p;
+
+	rkm_printfunc(command);
+	rkm_printfunc("Arguments:\n");
 
 	for (p = 0; args[p] != NULL; p++)
 	{
-		rkmprint_func("%s\n", args[p]);
+		rkm_printfunc(args[p]);
 	}
 }
-
-int main(void)
+/**
+ * my_program - a function that parses and executes user command
+ * Description: implements basic commandline interface
+ * Return: 0 always success
+ */
+int my_program(void)
 {
 	char input[100];
 	char *args[MAX_ARGS];
@@ -27,7 +33,7 @@ int main(void)
 
 	while (1)
 	{
-		rkmprint_func("Enter a command: ");
+		rkm_printfunc("Enter a command: ");
 		fgets(input, sizeof(input), stdin);
 
 		token = strtok(input, " \n");
