@@ -13,7 +13,7 @@ void read_order(char *order)
       {
         if (feof(stdin))
 	{
-            rkmprint_func("\n");
+            rkm_printfunc("\n");
             exit(EXIT_SUCCESS);
         } else
 	{
