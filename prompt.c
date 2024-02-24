@@ -8,5 +8,5 @@
  */
 void shows_prompt(void)
 {
-	rkmprint_func("kimtopshell$");
+	rkm_printfunc("kimtopshell$");
 }
