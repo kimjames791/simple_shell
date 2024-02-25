@@ -21,7 +21,7 @@ int exits_myshell(Data *facts)
 		exceed_maxx = sstatus > (unsigned int)INT_MAX;
 		if (!is_digit || str_len > 10 || exceed_maxx)
 		{
-			strerror(facts, 2);
+			get_error(facts, 2);
 			facts->status = 2;
 			return (1);
 		}

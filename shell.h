@@ -12,12 +12,13 @@
 /**
  * struct Data - Structure to hold arguments
  * @args: Array of strings representing arguments
- *
+ * @status member for error handling
  * Description: This structure is used to hold arguments.
  */
 typedef struct Data
 {
 	char **args;
+	int status;
 }
 Data;
 
@@ -27,7 +28,7 @@ void read_order(char *order);
 int execute_order(const char *order);
 void handle_args(char *command, char **args);
 int exits_myshell(Data *facts);
-void get_error(Data *facts, int error_code);
+void get_error(Data *facts __attribute__((unused)),int error_code);
 
 
 #endif /* SHELL_H */

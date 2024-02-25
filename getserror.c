@@ -6,7 +6,7 @@
  *@error_code: error displayed
  */
 
-void get_error(Data *facts, int error_code)
+void get_error(Data *facts __attribute__((unused)),int error_code)
 {
 	switch (error_code)
 	{
