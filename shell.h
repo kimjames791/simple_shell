@@ -27,6 +27,7 @@ void read_order(char *order);
 int execute_order(const char *order);
 void handle_args(char *command, char **args);
 int exits_myshell(Data *facts);
+void get_error(Data *facts, int error_code);
 
 
 #endif /* SHELL_H */
