@@ -19,6 +19,7 @@ typedef struct Data
 {
 	char **args;
 	int status;
+	char **envs;
 }
 Data;
 
@@ -29,6 +30,9 @@ int execute_order(const char *order);
 void handle_args(char *command, char **args);
 int exits_myshell(Data *facts);
 void get_error(Data *facts __attribute__((unused)),int error_code);
+int compr_term(const char *env, const char *term);
+int print_env(Data *facts);
+char *gets_env(const char *term, char **_envs);
 
 
 #endif /* SHELL_H */
