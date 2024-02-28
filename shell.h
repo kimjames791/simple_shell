@@ -38,5 +38,6 @@ void execute_command(char **tokenized_command, int command_type);
 char *check_path(char *command);
 void (*get_func(char *command))(char **);
 char *_getenv(char *name);
+void print_message(void);
 
 #endif /* SHELL_H */
