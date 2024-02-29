@@ -39,5 +39,8 @@ char *check_path(char *command);
 void (*get_func(char *command))(char **);
 char *_getenv(char *name);
 void print_message(void);
+void print_rkmprompt(void);
+void executes_cmd(char *cmd);
+int main_entry(int argc, char **argv;)
 
 #endif /* SHELL_H */
