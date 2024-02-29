@@ -33,10 +33,6 @@ void get_error(Data *facts __attribute__((unused)),int error_code);
 int compr_term(const char *env, const char *term);
 int print_env(Data *facts);
 char *gets_env(const char *term, char **_envs);
-int parse_command(char *command);
-void execute_command(char **tokenized_command, int command_type);
-char *check_path(char *command);
-void (*get_func(char *command))(char **);
-char *_getenv(char *name);
+path_t *path_gen(void);
 
 #endif /* SHELL_H */

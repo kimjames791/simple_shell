@@ -1,5 +1,4 @@
 #include "shell.h"
-/* functions needed to create and handle the path */
 
 /**
  * path_gen - generates the path
