@@ -63,18 +63,15 @@ char *gets_env(const char *term, char **_envs)
  */
 int print_env(Data *facts)
 {
-	env_t *var;
+	char **env_var;
 
 	facts->status = EXIT_SUCCESS;
 
-	for (var = facts->env; var; var = var->next)
+	for (env_var = facts->_envs; *env_var; env_var++)
 	{
-		if (var->key)
-			write(STDOUT_FILENO, var->key, _strlen(var->key));
-		write(STDOUT_FILENO, "=", 1);
-		if (var->val)
-			write(STDOUT_FILENO, var->val, _strlen(var->val));
+		write(STDOUT_FILENO, *env_var, strlen(*env_var));
 		write(STDOUT_FILENO, "\n", 1);
 	}
 	return (facts->status);
 }
+
