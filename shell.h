@@ -7,8 +7,11 @@
 #include <unistd.h>
 #include <sys/types.h>
 #include <sys/wait.h>
+#include <sys/stat.h>
 #include <limits.h>
 #include <ctype.h>
+#include <fcntl.h>
+#include <signal.h>
 /**
  * struct Data - Structure to hold arguments
  * @args: Array of strings representing arguments
@@ -42,5 +45,6 @@ void print_message(void);
 void print_rkmprompt(void);
 void executes_cmd(char *cmd);
 int main_entry(int argc, char **argv);
+
 
 #endif /* SHELL_H */

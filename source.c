@@ -16,6 +16,7 @@ int main(void)
 	shows_prompt();
 	read_order(order);
 	execute_order(order);
+	 path_t;
 }
 
 return (0);
