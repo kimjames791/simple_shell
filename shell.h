@@ -45,6 +45,9 @@ void print_message(void);
 void print_rkmprompt(void);
 void executes_cmd(char *cmd);
 int main_entry(int argc, char **argv);
+<<<<<<< HEAD
 
+=======
+>>>>>>> db1921165746e8935b84d106892be252e76eceef
 
 #endif /* SHELL_H */
