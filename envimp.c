@@ -59,22 +59,22 @@ char *gets_env(const char *term, char **_envs)
  * print_env - prints evironment variables seen
  *
  * @facts: data useful.
- * Return: 1 on success.
+ * Return: int value on success.
  */
 int print_env(Data *facts)
 {
-	int p, q;
+	env_t *var;
 
-	for (p = 0; facts->envs[p]; p++)
+	facts->status = EXIT_SUCCESS;
+
+	for (var = facts->env; var; var = var->next)
 	{
-
-		for (q = 0; facts->envs[p][q]; q++)
-			;
-
-		write(STDOUT_FILENO, facts->envs[p], q);
+		if (var->key)
+			write(STDOUT_FILENO, var->key, _strlen(var->key));
+		write(STDOUT_FILENO, "=", 1);
+		if (var->val)
+			write(STDOUT_FILENO, var->val, _strlen(var->val));
 		write(STDOUT_FILENO, "\n", 1);
 	}
-	facts->status = 0;
-
-	return (1);
+	return (facts->status);
 }

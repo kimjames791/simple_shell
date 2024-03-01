@@ -27,12 +27,8 @@ void executes_cmd(char *cmd)
 	}
 	else if (pid == 0)
 	{
-		if (execve(command, (char *[]){ command, NULL }, NULL) == -1)
+		if (execve(cmd, NULL, NULL) == -1)
 		{
-			perror("execve");
-			exit(EXIT_FAILURE);
-		}
-	{
 			perror("execve");
 			exit(EXIT_FAILURE);
 		}
